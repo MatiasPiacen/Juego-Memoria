@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="juego.css">
+    <title>Juego de Memoria</title>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contadores">
+            <div class="contador-item">
+                <h4 class="cabecera-titulo">Movimientos</h4>
+                <div class="cabecera-num">
+                    <span id="mov">00</span>/<span id="mov-total">20</span>
+                </div>
+            </div>
+            <div class="contador-item">
+                <h4 class="cabecera-titulo">Tiempo</h4>
+                <div class="cabecera-num">
+                    <span id="minutos">00</span>:<span id="segundos">00</span>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="mesa" id="mesa">
+            <div id="feedback" class="feedback">
+                <div class="modal">
+                    <h2>!Buen Trabajo¡</h2>
+                    <button id="reiniciar" class="reiniciar">¿Reiniciar?</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/variables-globales.js"></script>
+    <script src="js/baraja-reparte.js"></script>
+    <script src="js/descubrir-comparar.js"></script>
+    <script src="js/acierto-error.js"></script>
+    <script src="js/cronometro.js"></script>
+    <script src="js/contador.js"></script>
+    <script src="js/finalizar.js"></script>
+    <script src="js/iniciar.js"></script> 
+</body>
+</html>
