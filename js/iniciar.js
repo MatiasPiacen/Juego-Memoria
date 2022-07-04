@@ -10,4 +10,4 @@ function iniciar(){
 }
 
 iniciar();
-document.querySelector("#reiniciar").addEventListener('click', iniciar)
+//document.querySelector("#reiniciar").addEventListener('click', iniciar)

@@ -16,6 +16,15 @@ function descubrir (){
     actualizarContador();
     tarjetasPendientes = document.querySelectorAll(".contenedorJuego:not(.acertada)");
     if(tarjetasPendientes.length === 0){
+        
+        mesa.innerHTML = `
+        <div id="feedback" class="feedback">
+                <div class="modal">
+                    <h2>!Buen Trabajo¡</h2>
+                    <button id="reiniciar" class="reiniciar" onclick="iniciar()">¿Reiniciar?</button>
+                </div>
+        </div>
+        `
         finalizar();
     }
 }
