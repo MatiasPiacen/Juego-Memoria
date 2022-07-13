@@ -8,33 +8,51 @@
     <title>Juego de Memoria</title>
 </head>
 <body>
-    <header class="cabecera">
+    <!--div id="bienvenida" class="bienvenida">
+        <h1>👋 ¡Hola! 👋</h1>
+        <div class="bienvenida-botones">
+          <button type="submit">¡Quiero jugar!</button>
+          <button type="submit">Modo relax</button>
+        </div>
+      </div>-->
+      <header class="cabecera">
         <div class="contadores">
-            <div class="contador-item">
-                <h4 class="cabecera-titulo">Movimientos</h4>
-                <div class="cabecera-num">
-                    <span id="mov">00</span>/<span id="mov-total">20</span>
-                </div>
+          <div class="contador-item">
+            <h4 class="cabecera-titulo">Movimientos</h4>
+            <div class="cabecera-num">
+              <span id="mov">00</span>/<span id="mov-total">20</span>
             </div>
-            <div class="contador-item">
-                <h4 class="cabecera-titulo">Tiempo</h4>
-                <div class="cabecera-num">
-                    <span id="minutos">00</span>:<span id="segundos">00</span>
-                </div>
-            </div>
+          </div>
         </div>
-
-    </header>
-    <main>
-        <div class="mesa" id="mesa">
-            <div id="feedback" class="feedback">
-                <div class="modal">
-                    <h2>!Buen Trabajo¡</h2>
-                    <button id="reiniciar" class="reiniciar" onclick="iniciar()">¿Reiniciar?</button>
-                </div>
-            </div>
+        <div class="nivel">
+          <h4 class="cabecera-titulo">Nivel</h4>
+          <div class="cabecera-num"><span id="nivel">01</span></div>
         </div>
-        <!--<embed src="MySoundFile.wav" controls="console" autostart="true"> ---> 
+      </header>
+      <main>
+        <div id="mesa" class="mesa"></div>
+        <div id="subeNivel" class="sube-nivel">
+          <div class="modal">
+            <h2>¡Muy bien!</h2>
+            <button id="subir">Siguiente nivel</button>
+            <button class="reiniciar">Reiniciar</button>
+          </div>
+        </div>
+        <div id="gameOver" class="game-over">
+          <div class="modal">
+            <h2>¡Oh no!</h2>
+            <p>Te has quedado sin movimientos 😭</p>
+            <button class="reiniciar">Reiniciar</button>
+          </div>
+        </div>
+        <div id="endGame" class="end-game">
+          <div class="modal">
+            <h2>¡Enhorabuena!</h2>
+            <p>Has superado todos los niveles 🏆</p>
+            <button class="reiniciar">Reiniciar</button>
+          </div>
+        </div>
+      </main>
     </main>
     <script src="js/variables-globales.js"></script>
     <script src="js/baraja-reparte.js"></script>

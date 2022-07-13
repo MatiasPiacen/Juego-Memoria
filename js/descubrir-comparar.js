@@ -1,7 +1,10 @@
-function descubrir (){
+function descubrir() {
     var descubiertas;
     var tarjetasPendientes;
-    var totalDescubiertas = document.querySelectorAll(".descubierta:not(.acertada)")
+    var totalDescubiertas = document.querySelectorAll(
+        ".descubierta:not(.acertada)"
+        );
+
     if (totalDescubiertas.length > 1){
         return;
     }
@@ -13,20 +16,12 @@ function descubrir (){
         return;
     }
     comparar(descubiertas);
-    actualizarContador();
-    tarjetasPendientes = document.querySelectorAll(".contenedorJuego:not(.acertada)");
-    if(tarjetasPendientes.length === 0){
-        
-        mesa.innerHTML = `
-        <div id="feedback" class="feedback">
-                <div class="modal">
-                    <h2>!Buen Trabajo¡</h2>
-                    <button id="reiniciar" class="reiniciar" onclick="iniciar()">¿Reiniciar?</button>
-                </div>
-        </div>
-        `
-        finalizar();
-    }
+  actualizaContador();
+  tarjetasPendientes = document.querySelectorAll(".tarjeta:not(.acertada)");
+  if (tarjetasPendientes.length === 0) {
+    setTimeout(finalizar, 1000);
+  }
+
 }
 
 function comparar(tarjetasAcomparar){
@@ -36,7 +31,6 @@ function comparar(tarjetasAcomparar){
     else {
         error(tarjetasAcomparar);
     }  
-
 }
 
    

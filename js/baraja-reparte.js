@@ -1,31 +1,29 @@
-function barajarTarjetas (){
+function barajaTarjetas(lasTarjetas) {
     var resultado;
-
-    resultado = totalTarjetas.sort(function(){
-       return 0.5 - Math.random();
-    })
+    var totalTarjetas = lasTarjetas.concat(lasTarjetas);
+    resultado = totalTarjetas.sort(function() {
+      return 0.5 - Math.random();
+    });
     return resultado;
-}
+  }
 
-function repartirTarjetas(){
-
-    var mesa = document.querySelector("#mesa"); 
-    var tarjetaBarajadas = barajarTarjetas();
-
+  function reparteTarjetas(lasTarjetas) {
+    var mesa = document.querySelector("#mesa");
+    var tarjetasBarajadas = barajaTarjetas(lasTarjetas);
     mesa.innerHTML = "";
-
-    for (var i = 0; i < totalTarjetas.length; i++) {
-        var tarjeta = document.createElement("div");
-
-        tarjeta.innerHTML = 
-        `<div class='contenedorJuego' data-valor= "${totalTarjetas[i]}
-        ">` + 
-        `<div class='tarjetas'>` + 
-        `<img src='${totalTarjetas[i]
-        }'` + `/>` +
-        `</div>` +
-        `</div>`;
-
-        mesa.appendChild(tarjeta)
-} 
-}
+  
+    tarjetasBarajadas.forEach(function(elemento) {
+      var tarjeta = document.createElement("div");
+  
+      tarjeta.innerHTML =
+        "<div class='tarjeta' data-valor= " +
+        elemento +
+        ">" +
+        "<div class='tarjeta__contenido'>" +
+        elemento +
+        "</div>" +
+        "</div>";
+  
+      mesa.appendChild(tarjeta);
+    });
+  }
